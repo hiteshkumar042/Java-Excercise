@@ -126,13 +126,23 @@ public class Main {
     static void fibonacci(int n) {
         int n1 = 0;
         int n2 = 1;
-
         for (int i = 1; i <= n; i++) {
             System.out.print(n1 + " ");
+            System.out.println("");
             int n3 = n1 + n2;
             n1 = n2;
             n2 = n3;
         }
+    }
+
+    // factorial of n
+    static int factorial(int num) {
+        int res = 1;
+        while (num > 1) {
+            res = res * num;
+            num--;
+        }
+        return res;
     }
 
     public static void main(String[] args) {
@@ -166,6 +176,8 @@ public class Main {
         System.out.println(checkArmStrongNum(153));
         // Fibonacci Series upto nth term
         fibonacci(5);
+        // Factorial of a number
+        System.out.println("factorial of 5 is : " + factorial(5));
 
         sc.close();
     }
