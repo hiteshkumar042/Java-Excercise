@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class Numbers {
 
     // Positive or Negative Number
     static String positiveOrNegative(int num) {
