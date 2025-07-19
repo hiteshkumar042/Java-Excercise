@@ -132,7 +132,9 @@ public class Main {
         System.out.println(sumOfDigiTofNumber(12345));
         // Reverse of a number
         System.out.println(reverseANumber(12345));
+        //Check Palindrom Number
         System.out.println(checkPalindrom(5678765));
+        //Check Palindrom String
         System.out.println(checkPalindromString("Hitesh"));
 
         sc.close();
