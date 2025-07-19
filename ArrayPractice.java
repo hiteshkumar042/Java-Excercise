@@ -42,14 +42,32 @@ public class ArrayPractice {
         return new int[] { min, max };
     }
 
+    // Find Second Smallest Element in an Array
+    static int secondSmallest(int[] arr) {
+        int first = Integer.MAX_VALUE;
+        int second = Integer.MAX_VALUE;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < first) {
+                second = first;
+                first = arr[i];
+            } else if (arr[i] < second && arr[i] != first) {
+                second = arr[i];
+            }
+        }
+        return second;
+
+    }
+
     public static void main(String[] args) {
         // Find Larget Number in Array
         int[] arr = { 10, 15, 80, 25, 60 };
-        System.out.println(largetNumber(arr));
+        System.out.println("Largets in Array : " + largetNumber(arr));
         // Find Smallest Number in Array
-        System.out.println(smalletNumber(arr));
+        System.out.println("Smallest in Array : " + smalletNumber(arr));
         // Find the Smallest and largest element in an array
-        System.out.println(Arrays.toString((maxMinNumber(arr))));
+        System.out.println("Smallest and Largest in Array : " + Arrays.toString((maxMinNumber(arr))));
+        // Find Second Smallest Element in an Array
+        System.out.println("second smallest in Array : " + secondSmallest(arr));
 
     }
 }
