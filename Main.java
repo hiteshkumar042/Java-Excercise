@@ -109,6 +109,19 @@ public class Main {
         return str.equalsIgnoreCase(rev) ? "It's palindrom" : "It's not palindrom";
     }
 
+    // check arm strong number
+    static String checkArmStrongNum(int num) {
+        int origNum = num;
+        int result = 0;
+        int rem;
+        while (num != 0) {
+            rem = num % 10;
+            result = result + rem * rem * rem;
+            num = num / 10;
+        }
+        return origNum == result ? "Armstrong" : "Not Armstrong";
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         // Positive or Negative Number
@@ -132,11 +145,12 @@ public class Main {
         System.out.println(sumOfDigiTofNumber(12345));
         // Reverse of a number
         System.out.println(reverseANumber(12345));
-        //Check Palindrom Number
+        // Check Palindrom Number
         System.out.println(checkPalindrom(5678765));
-        //Check Palindrom String
+        // Check Palindrom String
         System.out.println(checkPalindromString("Hitesh"));
-
+        // Arm Strong Number
+        System.out.println(checkArmStrongNum(153));
         sc.close();
     }
 }
