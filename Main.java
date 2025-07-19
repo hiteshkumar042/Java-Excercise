@@ -122,6 +122,19 @@ public class Main {
         return origNum == result ? "Armstrong" : "Not Armstrong";
     }
 
+    // Fibonacci Series upto nth term
+    static void fibonacci(int n) {
+        int n1 = 0;
+        int n2 = 1;
+
+        for (int i = 1; i <= n; i++) {
+            System.out.print(n1 + " ");
+            int n3 = n1 + n2;
+            n1 = n2;
+            n2 = n3;
+        }
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         // Positive or Negative Number
@@ -151,6 +164,9 @@ public class Main {
         System.out.println(checkPalindromString("Hitesh"));
         // Arm Strong Number
         System.out.println(checkArmStrongNum(153));
+        // Fibonacci Series upto nth term
+        fibonacci(5);
+
         sc.close();
     }
 }
