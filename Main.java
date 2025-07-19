@@ -100,13 +100,13 @@ public class Main {
         return rev == origNum ? "It's Palindrom" : "It's not palindrom";
     }
 
+    // Check Palindrom String
     static String checkPalindromString(String str) {
         String rev = "";
         for (int i = str.length() - 1; i >= 0; i--) {
             rev = rev + str.charAt(i);
         }
         return str.equalsIgnoreCase(rev) ? "It's palindrom" : "It's not palindrom";
-
     }
 
     public static void main(String[] args) {
@@ -120,11 +120,12 @@ public class Main {
         // Sum of first n natural number recursive
         System.out.print("Enter a number : ");
         int n = sc.nextInt();
+        // Find the Sum of the Numbers in a Given Range in Java Recursive
         int sum = sumOfFirstNnaturalNumberRes(n);
         System.out.println(sum);
         // Find the Sum of the Numbers in a Given Range in Java
-        // int sumOfNrange = sumOfNRange(sc);
-        // System.out.println(sumOfNrange);
+        int sumOfNrange = sumOfNRange(sc);
+        System.out.println(sumOfNrange);
         // Find the Greatest of the Two Numbers in Java
         greatestOfYwo(9, 6);
         // sun of digit of a number
