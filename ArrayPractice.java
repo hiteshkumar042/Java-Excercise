@@ -55,7 +55,18 @@ public class ArrayPractice {
             }
         }
         return second;
+    }
 
+    // Check two Sum
+    static int[] checkTwoSum(int[] arr, int target) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] + arr[j] == target) {
+                    return new int[] { i, j };
+                }
+            }
+        }
+        return new int[] {};
     }
 
     public static void main(String[] args) {
@@ -68,6 +79,7 @@ public class ArrayPractice {
         System.out.println("Smallest and Largest in Array : " + Arrays.toString((maxMinNumber(arr))));
         // Find Second Smallest Element in an Array
         System.out.println("second smallest in Array : " + secondSmallest(arr));
-
+        // check Two Sum
+        System.out.println("Two sum is : " + Arrays.toString(checkTwoSum(arr, 25)));
     }
 }
